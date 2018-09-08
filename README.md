@@ -2,7 +2,9 @@
 Leet Code Solution - Samples.
 
 Programming Language: Java
+
 Editor: Atom
+
 Version: JDK 1.8
 
 
