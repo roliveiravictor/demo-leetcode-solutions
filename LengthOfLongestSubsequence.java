@@ -13,14 +13,18 @@
 @MineSolution
 public class Solution {
 
-    public int lengthOfLongestSubsequence(String s) {
-        String output = "";
-        while(!s.isEmpty()){
-            char firstChar = s.charAt(0);
-            output += firstChar;
-            s = s.replaceAll(String.valueOf(firstChar), "");
-        }
-        return output.length();
-    }
+  private final int FIRST_INDEX = 0;
+  private final String EMPTY_STRING = "";
 
+  public int lengthOfLongestSubsequence(String inputString) {
+      String outputString = "";
+      while(!inputString.isEmpty()){
+          char firstInputCharacter = inputString.charAt(FIRST_INDEX);
+          outputString += firstInputCharacter;
+
+          String toBeReplacedChar = String.valueOf(firstInputCharacter);
+          inputString = inputString.replaceAll(toBeReplacedChar, EMPTY_STRING);
+      }
+      return outputString.length();
+  }
 }
